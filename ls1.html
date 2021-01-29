@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<!-- Задание 1 -->
+<script type="text/javascript">
+  var degreeCelcium = +prompt("Ввведите температуру по Цельсию:");
+  var degreeFarengit;
+
+  degreeFarengit = (9 / 5)  * degreeCelcium + 32;
+
+  var message = "Температура Tc: " + degreeCelcium + "\n" + "Температура Tf: " + degreeFarengit;
+  alert(message);
+</script>
+
+<!-- Задание 2 -->
+<script type="text/javascript">
+  var name;
+  var admin;
+
+  name = "Василий"
+  admin = name;
+
+  var message = "admin: " + admin
+  alert(message);
+</script>
+
+<!-- Задание 3 -->
+<script type="text/javascript">
+  var message = 1000 + "108"
+  alert(message); //1000108
+</script>
+
+<!-- Задание 4 -->
+<!-- async и defer - позволяют не блокировать загрузку и отрисовку страницы, загружая скрипты параллельно с другими процессами
+defer -  грузит и выполняет скрипты в порядке указанном в коде, что первое написано, то и запустится первым
+async - грузит и выполняет скрипты в любом порядке, что первое загрузится и запустится первым -->
