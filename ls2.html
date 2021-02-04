@@ -1,0 +1,185 @@
+<meta charset="utf-8">
+
+<!-- Задание 1 -->
+<script type="text/javascript">
+    var a = 1, b = 1, c, d;
+    c = ++a;
+    alert(c);           // 2
+    d = b++;
+    alert(d);           // 1
+    c = (2+ ++a);
+    alert(c);      // 5
+    d = (2+ b++);
+    alert(d);      // 4
+    alert(a);                    // 3
+    alert(b);                    // 3
+    
+    //Такие значения отображатся, тк мы увеличиваем значения переменных используя оператор сложения и "++" до переменной и после. При использовании "++" до переменной сначала выполняется отперация присвоения, затем "++". При использвании после - сначала "++", потом присвоение. И увеличиваются обе переменные.
+</script>
+
+<!-- Задание 2 -->
+<script type="text/javascript">
+    var a = 2;
+    var x = 1 + (a *= 2);
+    alert(x); // 5
+</script>
+
+<!-- Задание 3 -->
+<script type="text/javascript">
+    var a = Math.floor((Math.random() - 0.5) * 2 * 100);
+    var b = Math.floor((Math.random() - 0.5) * 2 * 100);
+    
+    var result = countNumbers(a, b);
+    var message = "Случайные числа [" + a + "," + b + "]. Результат операции: " + result;
+    alert(message);
+    
+    function countNumbers(a, b) {
+        switch (true) {
+            case (a < 0 && b < 0) :
+                return a*b;
+                break;
+             case (a >= 0 && b >= 0) :
+                return a-b;
+                break;
+              default:
+                return a+b;
+        }
+    }
+</script>
+
+<!-- Задание 4 -->
+<script type="text/javascript">
+    var a = Math.floor(Math.random() * 15);
+    for (var i = 0; i <= 15; i++) {
+        switch (true) {
+            case (i < a):
+                break;
+            default:
+                alert(i);
+                break;
+        }
+    }
+</script>
+
+<!-- Задание 5 -->
+<script type="text/javascript">
+    function sumNumbers(a, b) {
+        return a+b;
+    }
+    
+    function subsctractNumbers(a, b) {
+        return a-b;
+    }
+    
+    function multiplyNumbers(a, b) {
+        return a*b;
+    }
+    
+    function devideNumbers(a, b) {
+        return a/b;
+    }
+    
+    var a = 12;
+    var b = 3;
+    
+    alert(a + "+" + b + "=" + sumNumbers(a, b))
+    alert(a + "-" + b + "=" + subsctractNumbers(a, b))
+    alert(a + "*" + b + "=" + multiplyNumbers(a, b))
+    alert(a + "/" + b + "=" + devideNumbers(a, b))
+</script>
+
+<!-- Задание 6 -->
+<script type="text/javascript">
+    
+    var arg1;
+    var arg2;
+    var operation;
+    
+    getArgementsAndOperator();
+    if (isNaN(arg1) || isNaN(arg2)) {
+        alert("Ошибка - аргумент не верен. Аргумент должен быть числом.");
+        getArgementsAndOperator();
+    } else {
+        alert(mathOperation(arg1, arg2, operation));
+    }
+    
+    function getArgementsAndOperator() {
+        arg1 = +prompt("Введите аргумент 1:");
+        arg2 = +prompt("Введите аргумент 2:");
+        operation = prompt("Введите операцию:");
+    }
+    
+    function exampleToString(arg1, arg2, operation) {
+        return arg1 + operation + arg2 + "="
+    }
+    
+    function sumNumbers(a, b) {
+        return a+b;
+    }
+    
+    function subsctractNumbers(a, b) {
+        return a-b;
+    }
+    
+    function multiplyNumbers(a, b) {
+        return a*b;
+    }
+    
+    function devideNumbers(a, b) {
+        return a/b;
+    }
+    
+    function mathOperation(arg1, arg2, operation) {
+        switch (true) {
+            case (operation == "+"):
+                return exampleToString(arg1, arg2, operation) + sumNumbers(arg1, arg2);
+                break;
+            case (operation == "-"):
+                return exampleToString(arg1, arg2, operation) + subsctractNumbers(arg1, arg2);
+                break;
+            case (operation == "*"):
+                return exampleToString(arg1, arg2, operation) + multiplyNumbers(arg1, arg2);
+                break;
+            case (operation == "/"):
+                return exampleToString(arg1, arg2, operation) + devideNumbers(arg1, arg2);
+                break;
+            default:
+                return "Ошибка - опреатор не верен. Доступные операторы +,-,*,/"
+                getArgementsAndOperator();
+                break;
+        }
+    } 
+</script>
+
+<!-- Задание 7  -->
+<script type="text/javascript">
+    var message = "";
+    if (0 == null) {
+        message = "0 == null = true";
+    } else {
+        message = "0 == null = false";
+    }
+    alert(message); // 0 и null - не равны. По идее 0 это число, а null пустота - отсутствие какого-либо значения.
+</script>
+
+
+<!-- Задание 8 -->
+<script type="text/javascript">
+    var val = 2;
+    var pow = 6;
+    
+    var currentVal = val;
+    var currentPow = 1;
+    power(val, pow);
+    
+    function power(val, pow) {
+        if (currentPow < pow) {
+            currentVal = currentVal * val;
+            currentPow++;
+            console.log(currentVal);
+            power(val, pow);
+        } else {
+             alert(val + "^" + pow + "=" + currentVal);
+        }
+    }
+</script>
