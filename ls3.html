@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+
+<!-- Задание 1 -->
+<script type="text/javascript">
+    var n = 0;
+    while (n <= 100) {
+        console.log(n);
+        n++;
+    }
+</script>
+
+
+<!-- Задание 2 -->
+<script type="text/javascript">
+    var shoppingCart = [100, 200, 176];
+    countCartSum(shoppingCart);
+    
+    function countCartSum(cart) {
+        var cartSum = 0;
+        for (var i = 0; i < cart.length; i++) {
+            cartSum = cartSum + cart[i];
+        }
+        alert("Сумма покупок: " + cartSum);
+    }
+</script>
+
+<!-- Задание 3 -->
+<script type="text/javascript">
+    var shoppingCart = [];
+    addProductsToBasket()
+    countBasketPrice(shoppingCart);
+    
+    // a
+    function addProductsToBasket() {
+        shoppingCart = [{name: "Товар 1", price: 100}, {name: "Товар 2", price: 354}, {name: "Товар 3", price: 655}];
+    }
+    
+    // b
+    function countBasketPrice(cart) {
+        var cartSum = 0;
+        for (var i = 0; i < cart.length; i++) {
+            cartSum = cartSum + cart[i].price;
+        }
+        alert("Сумма покупок: " + cartSum);
+    }
+</script>
+
+<!-- Задание 4 -->
+<script type="text/javascript">
+    var counter = 0;
+    for(counter = 0; counter <= 9; updateCounter()){
+        // здесь пусто}
+    }
+    
+    function updateCounter() {
+        console.log(counter);
+        counter++;
+    }
+</script>
+
+<!-- Задание 5 -->
+<script type="text/javascript">
+    var textLine = "";
+    for(var i = 0; i <= 20; i++){
+        textLine = textLine + "x";
+        console.log(textLine);
+    }
+    
+</script>
