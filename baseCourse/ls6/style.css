@@ -1,0 +1,33 @@
+body {
+  background-color: linen;
+}
+   
+.thumbnail {
+        height: 75px;
+        width: 75px;
+        object-fit: contain;
+}
+    
+.centerImage {
+        height: 400px;
+        width: 400px;
+        object-fit: contain;
+}
+    
+.centerDiv {
+        width: 646px;
+        background-color: powderblue;
+        vertical-align: middle;
+        margin: auto;
+        display: block;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+    
+button {
+  transition-duration: 0.4s;
+}
+    
