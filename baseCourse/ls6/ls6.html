@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Интренет магазин</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+    <div class="content">
+        <div class="centerDiv">
+            <button class="material-icons" id="previousButton" onclick="handlePrevious()">navigate_before</button> 
+            <img class="thumbnail" id="previousImage" onerror="handleImageError()">
+            <img class="centerImage" id="currentImage" onerror="handleImageError()">
+            <img class="thumbnail" id="nextImage" onerror="handleImageError()">
+            <button class="material-icons" id="nextButton" onclick="handleNext()">navigate_next</button>
+        </div>
+    </div>
+    </body>
+</html>
